@@ -40,22 +40,17 @@ document.getElementById("play-pause").click(); };
   -->
     
 <style>
-    @media screen and (orientation:landscape) {
-
-  #video-container {
-    -ms-transform: rotate(-90deg); /* IE 9 */
-    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-    transform: rotate(-90deg);
-    width: /* screen width */ ;
-    height: /* screen height */ ;
-    overflow: scroll;
-  }
-}
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) 
     
     </style>
     
 </head>
 <body>
+
     <div id="video-container">
         <video id="video-player" playsinline webkit-playsinline></video>
         <div id="hotspot-overlay"> </div>
@@ -66,6 +61,7 @@ document.getElementById("play-pause").click(); };
 
         </div>
     </div>
+  
     <script src="script.js"></script>
 </body>
 </html>
