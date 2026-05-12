@@ -16,29 +16,7 @@
     window.onload = function () {
 document.getElementById("play-pause").click(); };
     </script>
-    
-<!--
-<script>
-    let timeout;
 
-    function resetTimer() {
-      clearTimeout(timeout);
-      timeout = setTimeout(function () {
-        location.reload();
-      }, 3000); // 3 minutes = 180000
-    }
-
-    // Wait until DOM is ready before attaching listeners
-    document.addEventListener("DOMContentLoaded", function () {
-      ['mousemove', 'keydown', 'click', 'scroll', 'touchstart'].forEach(function (event) {
-        document.addEventListener(event, resetTimer);
-      });
-
-      resetTimer();
-    });
-  </script>
-  -->
-    
 
 </head>
 <body>
@@ -46,7 +24,7 @@ document.getElementById("play-pause").click(); };
     <div id="video-container">
         <video id="video-player" playsinline webkit-playsinline></video>
         <div id="hotspot-overlay"> </div>
-        <div id="controls" >
+        <div id="controls" style="display:none;" >
             <button id="play-pause" style="display:none;"> Play</button>
             <input type="range" id="timeline-slider" min="0" max="100" value="0" style="display:none;">
             <span id="timestamp-display" style="display:none;">00:00 / 00:00</span>
